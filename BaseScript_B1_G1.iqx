@@ -281,584 +281,72 @@
 </item>
 
 <picture Patch_locate_1_present>
-  / size = (20%,20%)
-  / position = (38.7%,30%)
-  /items = ()
+  / size = (60%,60%)
+  / position = (50%,50%)
+  /items = ("location1.png")
   /select = sequence
 </picture>
 
-<picture Patch_locate_1_resource>
-  / size = (20%,20%)
-  / position = (38.7%,30%)
-  /items = ("incong_48_1_a.jpg",
-"incong_58_1_a.jpg",
-"cong_59_1_a.jpg",
-"cong_62_1_a.jpg",
-"cong_75_1_a.jpg",
-"incong_16_1_a.jpg",
-"cong_19_1_a.jpg",
-"incong_42_1_a.jpg",
-"cong_1_1_a.jpg",
-"cong_113_1_a.jpg",
-"incong_134_1_a.jpg",
-"incong_120_1_a.jpg",
-"cong_4_1_p.jpg",
-"cong_32_1_a.jpg",
-"incong_106_1_a.jpg",
-"incong_80_1_a.jpg",
-"incong_6_1_a.jpg",
-"incong_3_1_a.jpg",
-"incong_50_1_a.jpg",
-"incong_131_1_p.jpg",
-"incong_122_1_a.jpg",
-"cong_30_1_a.jpg",
-"incong_64_1_a.jpg",
-"cong_36_1_a.jpg",
-"cong_119_1_p.jpg",
-"cong_9_1_a.jpg",
-"incong_129_1_a.jpg",
-"incong_23_1_a.jpg",
-"cong_136_1_a.jpg",
-"cong_56_1_a.jpg",
-"cong_74_1_a.jpg",
-"incong_127_1_a.jpg",
-"cong_96_1_a.jpg",
-"cong_91_1_a.jpg",
-"incong_7_1_a.jpg",
-"incong_110_1_a.jpg",
-"cong_126_1_a.jpg",
-"incong_55_1_a.jpg",
-"cong_70_1_a.jpg",
-"cong_44_1_a.jpg",
-"incong_100_1_a.jpg",
-"incong_117_1_a.jpg",
-"cong_130_1_a.jpg",
-"cong_90_1_a.jpg",
-"cong_87_1_a.jpg",
-"cong_20_1_a.jpg",
-"incong_27_1_a.jpg",
-"incong_135_1_a.jpg",
-"incong_68_1_a.jpg",
-"cong_140_1_a.jpg",
-)
-/select = sequence
-</picture>
 
 <picture Patch_locate_2_present>
-  / size = (20%,20%)
-  / position = (50%,30%)
-  /items = ()
+  / size = (60%,60%)
+  / position = (50%,50%)
+  /items = ("location2.png")
   /select = sequence
-</picture>
-
-<picture Patch_locate_2_resource>
-  / size = (20%,20%)
-  / position = (50%,30%)
-  /items = ("incong_48_2_a.jpg",
-"incong_58_2_a.jpg",
-"cong_59_2_a.jpg",
-"cong_62_2_a.jpg",
-"cong_75_2_a.jpg",
-"incong_16_2_a.jpg",
-"cong_19_2_a.jpg",
-"incong_42_2_a.jpg",
-"cong_1_2_a.jpg",
-"cong_113_2_a.jpg",
-"incong_134_2_a.jpg",
-"incong_120_2_a.jpg",
-"cong_4_2_a.jpg",
-"cong_32_2_a.jpg",
-"incong_106_2_a.jpg",
-"incong_80_2_a.jpg",
-"incong_6_2_a.jpg",
-"incong_3_2_a.jpg",
-"incong_50_2_a.jpg",
-"incong_131_2_a.jpg",
-"incong_122_2_a.jpg",
-"cong_30_2_p.jpg",
-"incong_64_2_a.jpg",
-"cong_36_2_a.jpg",
-"cong_119_2_a.jpg",
-"cong_9_2_a.jpg",
-"incong_129_2_a.jpg",
-"incong_23_2_a.jpg",
-"cong_136_2_a.jpg",
-"cong_56_2_a.jpg",
-"cong_74_2_a.jpg",
-"incong_127_2_a.jpg",
-"cong_96_2_a.jpg",
-"cong_91_2_a.jpg",
-"incong_7_2_a.jpg",
-"incong_110_2_a.jpg",
-"cong_126_2_a.jpg",
-"incong_55_2_a.jpg",
-"cong_70_2_a.jpg",
-"cong_44_2_a.jpg",
-"incong_100_2_a.jpg",
-"incong_117_2_a.jpg",
-"cong_130_2_a.jpg",
-"cong_90_2_a.jpg",
-"cong_87_2_a.jpg",
-"cong_20_2_a.jpg",
-"incong_27_2_a.jpg",
-"incong_135_2_p.jpg",
-"incong_68_2_a.jpg",
-"cong_140_2_p.jpg",
-)
-/select = sequence
 </picture>
 
 <picture Patch_locate_3_present>
-  / size = (20%,20%)
-  / position = (61.3%,30%)
-  /items = ()
+  / size = (60%,60%)
+  / position = (50%,50%)
+  /items = ("location3.png")
   /select = sequence
-</picture>
-
-<picture Patch_locate_3_resource>
-  / size = (20%,20%)
-  / position = (61.3%,30%)
-  /items = ("incong_48_3_a.jpg",
-"incong_58_3_a.jpg",
-"cong_59_3_a.jpg",
-"cong_62_3_a.jpg",
-"cong_75_3_a.jpg",
-"incong_16_3_a.jpg",
-"cong_19_3_a.jpg",
-"incong_42_3_a.jpg",
-"cong_1_3_a.jpg",
-"cong_113_3_a.jpg",
-"incong_134_3_a.jpg",
-"incong_120_3_a.jpg",
-"cong_4_3_a.jpg",
-"cong_32_3_a.jpg",
-"incong_106_3_a.jpg",
-"incong_80_3_a.jpg",
-"incong_6_3_a.jpg",
-"incong_3_3_a.jpg",
-"incong_50_3_a.jpg",
-"incong_131_3_a.jpg",
-"incong_122_3_a.jpg",
-"cong_30_3_a.jpg",
-"incong_64_3_a.jpg",
-"cong_36_3_a.jpg",
-"cong_119_3_a.jpg",
-"cong_9_3_a.jpg",
-"incong_129_3_a.jpg",
-"incong_23_3_a.jpg",
-"cong_136_3_a.jpg",
-"cong_56_3_a.jpg",
-"cong_74_3_a.jpg",
-"incong_127_3_a.jpg",
-"cong_96_3_a.jpg",
-"cong_91_3_a.jpg",
-"incong_7_3_a.jpg",
-"incong_110_3_a.jpg",
-"cong_126_3_a.jpg",
-"incong_55_3_a.jpg",
-"cong_70_3_a.jpg",
-"cong_44_3_a.jpg",
-"incong_100_3_a.jpg",
-"incong_117_3_a.jpg",
-"cong_130_3_a.jpg",
-"cong_90_3_a.jpg",
-"cong_87_3_a.jpg",
-"cong_20_3_a.jpg",
-"incong_27_3_a.jpg",
-"incong_135_3_a.jpg",
-"incong_68_3_a.jpg",
-"cong_140_3_a.jpg",
-)
-/select = sequence
 </picture>
 
 <picture Patch_locate_4_present>
-  / size = (20%,20%)
-  / position = (38.7%,50%)
-  /items = ()
+  / size = (60%,60%)
+  / position = (50%,50%)
+  /items = ("location4.png")
   /select = sequence
-</picture>
-
-<picture Patch_locate_4_resource>
-  / size = (20%,20%)
-  / position = (38.7%,50%)
-  /items = ("incong_48_4_a.jpg",
-"incong_58_4_a.jpg",
-"cong_59_4_a.jpg",
-"cong_62_4_a.jpg",
-"cong_75_4_a.jpg",
-"incong_16_4_a.jpg",
-"cong_19_4_p.jpg",
-"incong_42_4_a.jpg",
-"cong_1_4_a.jpg",
-"cong_113_4_a.jpg",
-"incong_134_4_a.jpg",
-"incong_120_4_a.jpg",
-"cong_4_4_a.jpg",
-"cong_32_4_p.jpg",
-"incong_106_4_a.jpg",
-"incong_80_4_a.jpg",
-"incong_6_4_a.jpg",
-"incong_3_4_a.jpg",
-"incong_50_4_a.jpg",
-"incong_131_4_a.jpg",
-"incong_122_4_a.jpg",
-"cong_30_4_a.jpg",
-"incong_64_4_a.jpg",
-"cong_36_4_a.jpg",
-"cong_119_4_a.jpg",
-"cong_9_4_a.jpg",
-"incong_129_4_p.jpg",
-"incong_23_4_a.jpg",
-"cong_136_4_p.jpg",
-"cong_56_4_a.jpg",
-"cong_74_4_a.jpg",
-"incong_127_4_a.jpg",
-"cong_96_4_a.jpg",
-"cong_91_4_a.jpg",
-"incong_7_4_a.jpg",
-"incong_110_4_a.jpg",
-"cong_126_4_a.jpg",
-"incong_55_4_a.jpg",
-"cong_70_4_a.jpg",
-"cong_44_4_a.jpg",
-"incong_100_4_a.jpg",
-"incong_117_4_a.jpg",
-"cong_130_4_a.jpg",
-"cong_90_4_a.jpg",
-"cong_87_4_a.jpg",
-"cong_20_4_a.jpg",
-"incong_27_4_a.jpg",
-"incong_135_4_a.jpg",
-"incong_68_4_p.jpg",
-"cong_140_4_a.jpg",
-)
-/select = sequence
 </picture>
 
 <picture Patch_locate_5_present>
-  / size = (20%,20%)
+  / size = (60%,60%)
   / position = (50%,50%)
-  /items = ()
+  /items = ("location5.png")
   /select = sequence
-</picture>
-
-<picture Patch_locate_5_resource>
-  / size = (20%,20%)
-  / position = (50%,50%)
-  /items = ("incong_48_5_p.jpg",
-"incong_58_5_p.jpg",
-"cong_59_5_a.jpg",
-"cong_62_5_a.jpg",
-"cong_75_5_a.jpg",
-"incong_16_5_a.jpg",
-"cong_19_5_a.jpg",
-"incong_42_5_a.jpg",
-"cong_1_5_a.jpg",
-"cong_113_5_a.jpg",
-"incong_134_5_a.jpg",
-"incong_120_5_a.jpg",
-"cong_4_5_a.jpg",
-"cong_32_5_a.jpg",
-"incong_106_5_a.jpg",
-"incong_80_5_a.jpg",
-"incong_6_5_a.jpg",
-"incong_3_5_a.jpg",
-"incong_50_5_a.jpg",
-"incong_131_5_a.jpg",
-"incong_122_5_p.jpg",
-"cong_30_5_a.jpg",
-"incong_64_5_a.jpg",
-"cong_36_5_a.jpg",
-"cong_119_5_a.jpg",
-"cong_9_5_a.jpg",
-"incong_129_5_a.jpg",
-"incong_23_5_a.jpg",
-"cong_136_5_a.jpg",
-"cong_56_5_a.jpg",
-"cong_74_5_a.jpg",
-"incong_127_5_a.jpg",
-"cong_96_5_a.jpg",
-"cong_91_5_a.jpg",
-"incong_7_5_a.jpg",
-"incong_110_5_a.jpg",
-"cong_126_5_p.jpg",
-"incong_55_5_a.jpg",
-"cong_70_5_a.jpg",
-"cong_44_5_p.jpg",
-"incong_100_5_a.jpg",
-"incong_117_5_a.jpg",
-"cong_130_5_a.jpg",
-"cong_90_5_p.jpg",
-"cong_87_5_a.jpg",
-"cong_20_5_a.jpg",
-"incong_27_5_a.jpg",
-"incong_135_5_a.jpg",
-"incong_68_5_a.jpg",
-"cong_140_5_a.jpg",
-)
-/select = sequence
 </picture>
 
 <picture Patch_locate_6_present>
-  / size = (20%,20%)
-  / position = (61.3%,50%)
-  /items = ()
+  / size = (60%,60%)
+  / position = (50%,50%)
+  /items = ("location6.png")
   /select = sequence
-</picture>
-
-<picture Patch_locate_6_resource>
-  / size = (20%,20%)
-  / position = (61.3%,50%)
-  /items = ("incong_48_6_a.jpg",
-"incong_58_6_a.jpg",
-"cong_59_6_p.jpg",
-"cong_62_6_p.jpg",
-"cong_75_6_p.jpg",
-"incong_16_6_a.jpg",
-"cong_19_6_a.jpg",
-"incong_42_6_a.jpg",
-"cong_1_6_a.jpg",
-"cong_113_6_a.jpg",
-"incong_134_6_p.jpg",
-"incong_120_6_p.jpg",
-"cong_4_6_a.jpg",
-"cong_32_6_a.jpg",
-"incong_106_6_a.jpg",
-"incong_80_6_a.jpg",
-"incong_6_6_a.jpg",
-"incong_3_6_a.jpg",
-"incong_50_6_a.jpg",
-"incong_131_6_a.jpg",
-"incong_122_6_a.jpg",
-"cong_30_6_a.jpg",
-"incong_64_6_a.jpg",
-"cong_36_6_p.jpg",
-"cong_119_6_a.jpg",
-"cong_9_6_a.jpg",
-"incong_129_6_a.jpg",
-"incong_23_6_a.jpg",
-"cong_136_6_a.jpg",
-"cong_56_6_a.jpg",
-"cong_74_6_p.jpg",
-"incong_127_6_a.jpg",
-"cong_96_6_a.jpg",
-"cong_91_6_a.jpg",
-"incong_7_6_a.jpg",
-"incong_110_6_a.jpg",
-"cong_126_6_a.jpg",
-"incong_55_6_p.jpg",
-"cong_70_6_a.jpg",
-"cong_44_6_a.jpg",
-"incong_100_6_a.jpg",
-"incong_117_6_a.jpg",
-"cong_130_6_a.jpg",
-"cong_90_6_a.jpg",
-"cong_87_6_a.jpg",
-"cong_20_6_a.jpg",
-"incong_27_6_a.jpg",
-"incong_135_6_a.jpg",
-"incong_68_6_a.jpg",
-"cong_140_6_a.jpg",
-)
-/select = sequence
 </picture>
 
 <picture Patch_locate_7_present>
-  / size = (20%,20%)
-  / position = (38.7%,70%)
-  /items = ()
+  / size = (60%,60%)
+  / position = (50%,50%)
+  /items = ("location7.png")
   /select = sequence
-</picture>
-
-<picture Patch_locate_7_resource>
-  / size = (20%,20%)
-  / position = (38.7%,70%)
-  /items = ("incong_48_7_a.jpg",
-"incong_58_7_a.jpg",
-"cong_59_7_a.jpg",
-"cong_62_7_a.jpg",
-"cong_75_7_a.jpg",
-"incong_16_7_a.jpg",
-"cong_19_7_a.jpg",
-"incong_42_7_a.jpg",
-"cong_1_7_a.jpg",
-"cong_113_7_a.jpg",
-"incong_134_7_a.jpg",
-"incong_120_7_a.jpg",
-"cong_4_7_a.jpg",
-"cong_32_7_a.jpg",
-"incong_106_7_p.jpg",
-"incong_80_7_a.jpg",
-"incong_6_7_a.jpg",
-"incong_3_7_a.jpg",
-"incong_50_7_a.jpg",
-"incong_131_7_a.jpg",
-"incong_122_7_a.jpg",
-"cong_30_7_a.jpg",
-"incong_64_7_a.jpg",
-"cong_36_7_a.jpg",
-"cong_119_7_a.jpg",
-"cong_9_7_a.jpg",
-"incong_129_7_a.jpg",
-"incong_23_7_a.jpg",
-"cong_136_7_a.jpg",
-"cong_56_7_a.jpg",
-"cong_74_7_a.jpg",
-"incong_127_7_a.jpg",
-"cong_96_7_a.jpg",
-"cong_91_7_a.jpg",
-"incong_7_7_a.jpg",
-"incong_110_7_a.jpg",
-"cong_126_7_a.jpg",
-"incong_55_7_a.jpg",
-"cong_70_7_p.jpg",
-"cong_44_7_a.jpg",
-"incong_100_7_p.jpg",
-"incong_117_7_a.jpg",
-"cong_130_7_p.jpg",
-"cong_90_7_a.jpg",
-"cong_87_7_p.jpg",
-"cong_20_7_a.jpg",
-"incong_27_7_a.jpg",
-"incong_135_7_a.jpg",
-"incong_68_7_a.jpg",
-"cong_140_7_a.jpg",
-)
-/select = sequence
 </picture>
 
 <picture Patch_locate_8_present>
-  / size = (20%,20%)
-  / position = (50%,70%)
-  /items = ()
+  / size = (60%,60%)
+  / position = (50%,50%)
+  /items = ("location8.png")
   /select = sequence
-</picture>
-
-<picture Patch_locate_8_resource>
-  / size = (20%,20%)
-  / position = (50%,70%)
-  /items = ("incong_48_8_a.jpg",
-"incong_58_8_a.jpg",
-"cong_59_8_a.jpg",
-"cong_62_8_a.jpg",
-"cong_75_8_a.jpg",
-"incong_16_8_p.jpg",
-"cong_19_8_a.jpg",
-"incong_42_8_a.jpg",
-"cong_1_8_p.jpg",
-"cong_113_8_p.jpg",
-"incong_134_8_a.jpg",
-"incong_120_8_a.jpg",
-"cong_4_8_a.jpg",
-"cong_32_8_a.jpg",
-"incong_106_8_a.jpg",
-"incong_80_8_a.jpg",
-"incong_6_8_p.jpg",
-"incong_3_8_p.jpg",
-"incong_50_8_a.jpg",
-"incong_131_8_a.jpg",
-"incong_122_8_a.jpg",
-"cong_30_8_a.jpg",
-"incong_64_8_p.jpg",
-"cong_36_8_a.jpg",
-"cong_119_8_a.jpg",
-"cong_9_8_p.jpg",
-"incong_129_8_a.jpg",
-"incong_23_8_a.jpg",
-"cong_136_8_a.jpg",
-"cong_56_8_p.jpg",
-"cong_74_8_a.jpg",
-"incong_127_8_p.jpg",
-"cong_96_8_a.jpg",
-"cong_91_8_a.jpg",
-"incong_7_8_a.jpg",
-"incong_110_8_p.jpg",
-"cong_126_8_a.jpg",
-"incong_55_8_a.jpg",
-"cong_70_8_a.jpg",
-"cong_44_8_a.jpg",
-"incong_100_8_a.jpg",
-"incong_117_8_a.jpg",
-"cong_130_8_a.jpg",
-"cong_90_8_a.jpg",
-"cong_87_8_a.jpg",
-"cong_20_8_a.jpg",
-"incong_27_8_p.jpg",
-"incong_135_8_a.jpg",
-"incong_68_8_a.jpg",
-"cong_140_8_a.jpg",
-)
-/select = sequence
 </picture>
 
 <picture Patch_locate_9_present>
-  / size = (20%,20%)
-  / position = (61.3%,70%)
-  /items = ()
+  / size = (60%,60%)
+  / position = (50%,50%)
+  /items = ("location9.png")
   /select = sequence
-</picture>
-
-<picture Patch_locate_9_resource>
-  / size = (20%,20%)
-  / position = (61.3%,70%)
-  /items = ("incong_48_9_a.jpg",
-"incong_58_9_a.jpg",
-"cong_59_9_a.jpg",
-"cong_62_9_a.jpg",
-"cong_75_9_a.jpg",
-"incong_16_9_a.jpg",
-"cong_19_9_a.jpg",
-"incong_42_9_p.jpg",
-"cong_1_9_a.jpg",
-"cong_113_9_a.jpg",
-"incong_134_9_a.jpg",
-"incong_120_9_a.jpg",
-"cong_4_9_a.jpg",
-"cong_32_9_a.jpg",
-"incong_106_9_a.jpg",
-"incong_80_9_p.jpg",
-"incong_6_9_a.jpg",
-"incong_3_9_a.jpg",
-"incong_50_9_p.jpg",
-"incong_131_9_a.jpg",
-"incong_122_9_a.jpg",
-"cong_30_9_a.jpg",
-"incong_64_9_a.jpg",
-"cong_36_9_a.jpg",
-"cong_119_9_a.jpg",
-"cong_9_9_a.jpg",
-"incong_129_9_a.jpg",
-"incong_23_9_p.jpg",
-"cong_136_9_a.jpg",
-"cong_56_9_a.jpg",
-"cong_74_9_a.jpg",
-"incong_127_9_a.jpg",
-"cong_96_9_p.jpg",
-"cong_91_9_p.jpg",
-"incong_7_9_p.jpg",
-"incong_110_9_a.jpg",
-"cong_126_9_a.jpg",
-"incong_55_9_a.jpg",
-"cong_70_9_a.jpg",
-"cong_44_9_a.jpg",
-"incong_100_9_a.jpg",
-"incong_117_9_p.jpg",
-"cong_130_9_a.jpg",
-"cong_90_9_a.jpg",
-"cong_87_9_a.jpg",
-"cong_20_9_p.jpg",
-"incong_27_9_a.jpg",
-"incong_135_9_a.jpg",
-"incong_68_9_a.jpg",
-"cong_140_9_a.jpg",
-)
-/select = sequence
 </picture>
 
 <picture nPatch_locate_1_resource>
   / size = (20%,20%)
-  / position = (38.7%,30%)
+  / position = (36.7%,30%)
   /items = ("patch0004741.jpg",
 "patch0000097.jpg",
 "patch0005629.jpg",
@@ -913,7 +401,7 @@
 
 <picture nPatch_locate_3_resource>
   / size = (20%,20%)
-  / position = (61.3%,30%)
+  / position = (63.3%,30%)
   /items = ("patch0002487.jpg",
 "patch0003183.jpg",
 "patch0000579.jpg",
@@ -941,7 +429,7 @@
 
 <picture nPatch_locate_4_resource>
   / size = (20%,20%)
-  / position = (38.7%,50%)
+  / position = (36.7%,50%)
   /items = ("patch0002297.jpg",
 "patch0005633.jpg",
 "patch0001961.jpg",
@@ -987,7 +475,7 @@
 
 <picture nPatch_locate_6_resource>
   / size = (20%,20%)
-  / position = (61.3%,50%)
+  / position = (63.3%,50%)
   /items = ("patch0002407.jpg",
 "patch0002119.jpg",
 "patch0006451.jpg",
@@ -1000,7 +488,7 @@
 
 <picture nPatch_locate_7_resource>
   / size = (20%,20%)
-  / position = (38.7%,70%)
+  / position = (36.7%,70%)
   /items = ("patch0001833.jpg",
 "patch0006201.jpg",
 "patch0002037.jpg",
@@ -1049,7 +537,7 @@
 
 <picture nPatch_locate_9_resource>
   / size = (20%,20%)
-  / position = (61.3%,70%)
+  / position = (63.3%,70%)
   /items = ("patch0003923.jpg",
 "patch0005051.jpg",
 "patch0005543.jpg",
