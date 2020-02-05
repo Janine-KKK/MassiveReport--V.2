@@ -1,0 +1,105 @@
+﻿<picture SquarePresent>
+	/ size=(60%, 60%)
+	/ position = (50%,50%)
+	/ items = image_presentation
+	/ select = sequence 
+</picture>
+
+***************************************************************************************************
+***************************************************************************************************
+2. Masking Pictures
+<picture Masking_picture_1>
+	/ size=(60%, 60%)
+	/ position = (50%,50%)
+	/items = Masking_item_1
+	/ select = noreplace 
+</picture>
+<picture Masking_picture_2>
+	/ size=(60%, 60%)
+	/ position = (50%,50%)
+	/ items = Masking_item_2
+	/ select = noreplace 
+</picture>
+<picture Masking_picture_3>
+	/ size=(60%, 60%)
+	/ position = (50%,50%)
+	/ items = Masking_item_3
+	/ select = noreplace 
+</picture>
+<picture Masking_picture_4>
+	/ size=(60%, 60%)
+	/ position = (50%,50%)
+	/ items = Masking_item_4
+	/ select = noreplace 
+</picture>
+<picture Masking_picture_5>
+	/ size=(60%, 60%)
+	/ position = (50%,50%)
+	/ items = Masking_item_5
+	/ select = noreplace 
+</picture>
+
+<picture Masking_patch_1>
+	/ size = (20%,20%)
+	/ hposition = values.x_coordinate
+	/ vposition = values.y_coordinate
+	/ items = Masking_patch_item_1
+	/ select = noreplace 
+</picture>
+<picture Masking_patch_2>
+	/ size = (20%,20%)
+	/ hposition = values.x_coordinate
+	/ vposition = values.y_coordinate
+	/ items = Masking_patch_item_2
+	/ select = noreplace 
+</picture>
+<picture Masking_patch_3>
+	/ size = (20%,20%)
+	/ hposition = values.x_coordinate
+	/ vposition = values.y_coordinate
+	/ items = Masking_patch_item_3
+	/ select = noreplace 
+</picture>
+<picture Masking_patch_4>
+	/ size = (20%,20%)
+	/ hposition = values.x_coordinate
+	/ vposition = values.y_coordinate
+	/ items = Masking_patch_item_4
+	/ select = noreplace 
+</picture>
+<picture Masking_patch_5>
+	/ size = (20%,20%)
+	/ hposition = values.x_coordinate
+	/ vposition = values.y_coordinate
+	/ items = Masking_patch_item_5
+	/ select = noreplace 
+</picture>
+
+<picture CP_patch>
+	/ size = (20%,20%)
+	/ hposition = text.x.item(values.Index)
+	/ vposition = text.y.item(values.Index)
+	/ items = CP_patch
+	/ select = sequence
+</picture>
+
+***************************************************************************************************
+***************************************************************************************************
+***************************************************************************************************
+***************************************************************************************************
+<text cross>
+	/ items = ("+")
+	/ color = snow
+	/ txbgcolor = (127, 127, 127)
+	/ fontstyle = ("Arial",100pt)
+</text>
+
+<text x>
+	/ items = CP_x_coordinates
+	/ select = sequence
+</text>
+
+<text y>
+	/ items = CP_y_coordinates
+	/ select = sequence
+</text>
