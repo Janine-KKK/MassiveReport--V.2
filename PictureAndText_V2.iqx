@@ -1,9 +1,16 @@
 ﻿<picture SquarePresent>
 	/ size=(60%, 60%)
-	/ position = (50%,50%)
 	/ items = image_presentation
 	/ select = sequence 
 </picture>
+
+<picture SquarePresent_present>
+	/ size=(60%, 60%)
+	/ position = (50%,50%)
+	/ items = ()
+	/ select = sequence 
+</picture>
+
 
 <picture Present_image_patch_step>
 	/ size=(60%, 60%)
@@ -84,11 +91,18 @@
 
 <picture CP_patch>
 	/ size = (20%,20%)
-	/ hposition = text.x.item(values.Index)
-	/ vposition = text.y.item(values.Index)
 	/ items = CP_patch
 	/ select = sequence
 </picture>
+
+<picture CP_patch_present>
+	/ size = (20%,20%)
+	/ hposition = text.x.item(values.order)
+	/ vposition = text.y.item(values.order)
+	/ items = ()
+	/ select = sequence
+</picture>
+
 
 ***************************************************************************************************
 ***************************************************************************************************
