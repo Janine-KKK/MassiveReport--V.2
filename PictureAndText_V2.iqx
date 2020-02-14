@@ -4,13 +4,18 @@
 	/ select = sequence 
 </picture>
 
+<picture SquarePresent_practice>
+	/ size=(60%, 60%)
+	/ items = image_presentation_practice
+	/ select = sequence 
+</picture>
+
 <picture SquarePresent_present>
 	/ size=(60%, 60%)
 	/ position = (50%,50%)
 	/ items = ()
 	/ select = sequence 
 </picture>
-
 
 <picture Present_image_patch_step>
 	/ size=(60%, 60%)
@@ -103,6 +108,34 @@
 	/ select = sequence
 </picture>
 
+<picture CP_patch_practice>
+	/ size = (20%,20%)
+	/ items = CP_patch_practice
+	/ select = sequence
+</picture>
+
+<picture CP_patch_present_practice>
+	/ size = (20%,20%)
+	/ hposition = values.x_coordinate
+	/ vposition = values.y_coordinate
+	/ items = ()
+	/ select = sequence
+</picture>
+
+<text process_notice>
+/ items = ("You have finished <%values.order_question%> of <%values.number_of_patch%> Questions")
+/ fontstyle = ("Arial", 2.8%, true)
+/ position = (50%,85%)
+/ txbgcolor = (127,127,127)
+</text>
+
+<text Practice_notice>
+	/ items = ("Practice trial <%values.Index_practice%>")
+	/ fontstyle = ("Arial", 3%, true)
+	/ position = (50%,5%)
+	/ txbgcolor = (127,127,127)
+	/ txcolor = red
+</text>
 
 ***************************************************************************************************
 ***************************************************************************************************

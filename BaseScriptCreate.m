@@ -35,6 +35,7 @@ for subject = 1:1
             order_list = order_list_group(91:end);
         end
         order_list_Masking = randperm(140,Number_of_Masking);
+        order_list_practice = randperm(140,Total_Trial_number_practice);
         filename = sprintf('BaseScript_B%d_G%d.iqx',subject,group);
         fid = fopen(filename,'w');
         NumberOfNpatch = 7044;
@@ -69,6 +70,37 @@ for subject = 1:1
             end
         end
         fprintf(fid,'</item>\n\n');
+ 
+%% Create List of Presentation for Practice        
+fprintf(fid,'<item image_presentation_practice>\n');
+PresentArray_practice = string(ones(1,Total_Trial_number_practice));
+if mod(Total_Trial_number_practice,2) == 0
+    ChooseINCONGorCONG_practice = randerr(1,Total_Trial_number_practice,Total_Trial_number_practice/2)+1;
+elseif mod(Total_Trial_number_practice,2) == 1
+    ChooseINCONGorCONG_practice = randerr(1,Total_Trial_number_practice,(Total_Trial_number_practice-1)/2)+1;
+end
+for presentation_number = 1:Total_Trial_number_practice
+    if ChooseINCONGorCONG_practice(presentation_number) == 1
+        PresentArray_practice(presentation_number) = 'Cong';
+        string_order = num2str(order_list_practice(presentation_number).','%03d');
+        address = sprintf('"%s%s.jpg"','SquareCongruent_',string_order);
+        file_name = sprintf('%s%s%s.jpg',file_path_CongruentCropped,'SquareCongruent_',string_order);
+        fprintf(fid,'/%d = ',presentation_number);
+        fprintf(fid,'%s\n',address);
+        copyfile(file_name,DST_PATH_t);%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%COPY
+    elseif ChooseINCONGorCONG_practice(presentation_number) == 2
+        %Here to create part of Incongruent images
+        PresentArray_practice(presentation_number) = 'INcong';
+        string_order = num2str(order_list_practice(presentation_number).','%03d');
+        address = sprintf('"%s%s.jpg"','SquareIncongruent_',string_order);
+        file_name = sprintf('%s%s%s.jpg',file_path_InCongruentCropped,'SquareIncongruent_',string_order);
+        fprintf(fid,'/%d = ',presentation_number);
+        fprintf(fid,'%s\n',address);
+        copyfile(file_name,DST_PATH_t);%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%COPY
+    end
+end
+fprintf(fid,'</item>\n\n');
+
 %% Create List of Masking and the masking for patches
             for Masking_group = 1:5
                 string_title_number = num2str(Masking_group.','%01d');
@@ -105,6 +137,19 @@ for subject = 1:1
                 end
                 IP_position(presentation_order) = find(temp_array == 'p'); %%Find the CP position of the image
             end
+            
+            % Practice Part
+            IP_position_practice = ones(1,length(order_list_practice));
+            for presentation_order = 1:length(order_list_practice)
+                Presentation_image_patch_name = sprintf('cong_%d_*.jpg',order_list_practice(presentation_order));
+                img_path_list = dir(strcat(file_path_Congruent_Patch,Presentation_image_patch_name));
+                num_img = length(img_path_list);  
+                temp_array = ones(1,num_img);
+                for kk = 1:num_img
+                    temp_array(kk) = img_path_list(kk).name(length(img_path_list(kk).name)-4);
+                end
+                IP_position_practice(presentation_order) = find(temp_array == 'p'); %%Find the CP position of the image
+            end
 %% Create CP position group
             fprintf(fid,'<item CP_patch>\n');
             for presentation_number = 1:Total_Trial_number
@@ -115,6 +160,23 @@ for subject = 1:1
                    copyfile(file_name,DST_PATH_t);%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%COPY
                 elseif PresentArray(presentation_number) == "INcong"
                    item_content = sprintf('cong_%d_%d_p.jpg',order_list(presentation_number),IP_position(presentation_number));
+                   fprintf(fid,'/%d = "%s"\n',presentation_number,item_content);
+                   file_name = sprintf('%s%s',file_path_Congruent_Patch,item_content);
+                   copyfile(file_name,DST_PATH_t);%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%COPY
+                end
+            end
+            fprintf(fid,'</item>\n\n');
+            
+%% Create CP position group for Practice Part
+            fprintf(fid,'<item CP_patch_practice>\n');
+            for presentation_number = 1:Total_Trial_number_practice
+                if PresentArray_practice(presentation_number) == "Cong"
+                   item_content = sprintf('incong_%d_%d_p.jpg',order_list_practice(presentation_number),IP_position_practice(presentation_number));
+                   fprintf(fid,'/%d = "%s"\n',presentation_number,item_content);
+                   file_name = sprintf('%s%s',file_path_inCongruent_Patch,item_content);
+                   copyfile(file_name,DST_PATH_t);%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%COPY
+                elseif PresentArray_practice(presentation_number) == "INcong"
+                   item_content = sprintf('cong_%d_%d_p.jpg',order_list_practice(presentation_number),IP_position_practice(presentation_number));
                    fprintf(fid,'/%d = "%s"\n',presentation_number,item_content);
                    file_name = sprintf('%s%s',file_path_Congruent_Patch,item_content);
                    copyfile(file_name,DST_PATH_t);%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%COPY
@@ -155,6 +217,41 @@ for subject = 1:1
                 fprintf(fid,'/%d = "%s%%"\n',presentation_number,CP_y_coordinates(presentation_number));
             end
             fprintf(fid,'</item>\n\n');
+%% Practice Part
+%Practice Part
+            CP_x_coordinates_practice = string(ones(1,Total_Trial_number_practice));
+            CP_y_coordinates_practice = string(ones(1,Total_Trial_number_practice));
+            for presentation_number = 1:Total_Trial_number_practice
+                if IP_position_practice(presentation_number) == 1 || IP_position_practice(presentation_number) == 4 || IP_position_practice(presentation_number) == 7
+                    CP_x_coordinates_practice(presentation_number) = "36.7";
+                elseif IP_position_practice(presentation_number) == 2 || IP_position_practice(presentation_number) == 5 || IP_position_practice(presentation_number) == 8
+                    CP_x_coordinates_practice(presentation_number) = "50";
+                elseif IP_position_practice(presentation_number) == 3 || IP_position_practice(presentation_number) == 6 || IP_position_practice(presentation_number) == 9
+                    CP_x_coordinates_practice(presentation_number) = "63.3";
+                end    
+            end
+
+            for presentation_number = 1:Total_Trial_number_practice
+                if IP_position_practice(presentation_number) == 1 || IP_position_practice(presentation_number) == 2 || IP_position_practice(presentation_number) == 3
+                    CP_y_coordinates_practice(presentation_number) = "30";
+                elseif IP_position_practice(presentation_number) == 4 || IP_position_practice(presentation_number) == 5 || IP_position_practice(presentation_number) == 6
+                    CP_y_coordinates_practice(presentation_number) = "50";
+                elseif IP_position_practice(presentation_number) == 7 || IP_position_practice(presentation_number) == 8 || IP_position_practice(presentation_number) == 9
+                    CP_y_coordinates_practice(presentation_number) = "70";
+                end    
+            end
+
+            fprintf(fid,'<item CP_x_coordinates_practice>\n');
+            for presentation_number = 1:Total_Trial_number_practice
+                fprintf(fid,'/%d = "%s%%"\n',presentation_number,CP_x_coordinates_practice(presentation_number));
+            end
+            fprintf(fid,'</item>\n\n');
+
+            fprintf(fid,'<item CP_y_coordinates_practice>\n');
+            for presentation_number = 1:Total_Trial_number_practice
+                fprintf(fid,'/%d = "%s%%"\n',presentation_number,CP_y_coordinates_practice(presentation_number));
+            end
+            fprintf(fid,'</item>\n\n'); 
 %% Create Picture Stimuli
 
 %% Random selcet 3 patches from 9 positions in the original image, and the position keep the same location from the image

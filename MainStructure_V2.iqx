@@ -9,7 +9,6 @@
 	/size = 20%
 	/Index = 0
 	/order = 0
-	/Index_practice = 0
 	/Index_odd_practice = 0
 	/Index_even_practice = 0
 	/x_coordinate = 0
@@ -21,15 +20,16 @@
 	/Exist_Object = 0
 	/Patch_Position = 0
 	/Image_ID = 0
-	/time_out_practice = 0
-	/present_timeout_practice = 0
 	/order_question = 0
 	/number_of_patch = 0
+	
+	/question_choose = 0
 </values>
 
 <include>
 / file = "PictureAndText_V2.iqx"
 / file = "BaseScript_B1_G1.iqx"
+/ file = "PracticeTrial.iqx"
 / file = "8CR_4page.iqx"
 / file = "8CR_disks.iqx"
 </include>
@@ -99,10 +99,10 @@
 / select = noreplace(1-9)
 </counter>
 
-
-<counter ques_index>
-/ select = noreplace(1-6)
+<counter question_choose>
+/ select = noreplace(1-20)
 </counter>
+
 
 <trial fixiation_2nd>
 	/ stimulusframes = [1 = cross]
@@ -120,8 +120,8 @@
 	/ ontrialbegin = [
 	values.response = 0;
 	values.p_confidence = 0;
-	
-	if(counter.ques_index.selectedvalue == 1 || counter.ques_index.selectedvalue == 2 || counter.ques_index.selectedvalue == 3){
+	values.question_choose = counter.question_choose.selectedvalue;
+	if(values.question_choose >= 1 && values.question_choose <= 8){
 		if(counter.patch_of_original.selectedvalue == 1){
 		
 			picture.Present_image_patch_step.insertitem(picture.SquarePresent.item(values.order),1);
@@ -314,7 +314,7 @@
 			
 			values.Patch_Position = 9;				
 		}	
-	}else if(counter.ques_index.selectedvalue == 4){
+	}else if(values.question_choose == 9){
 		picture.CP_patch_present.insertitem(picture.CP_patch.item(values.order),1);
 		trial.Patch_present.insertstimulusframe(text.cross, 1);
 		trial.Patch_present.insertstimulusframe(picture.CP_patch_present, 2);
@@ -347,6 +347,54 @@
 			values.Patch_Position = 8;
 		}else if(item.CP_x_coordinates.item(values.order) == "63.3%" && item.CP_y_coordinates.item(values.order) == "70%"){
 			values.Patch_Position = 9;
+		}
+	}else if(values.question_choose == 10){
+		picture.Present_image_patch_step.insertitem(picture.SquarePresent.item(values.order),1);
+		trial.Patch_present.insertstimulusframe(picture.Present_image_patch_step,1);
+		if(item.Object_Patch.item(values.order) == "1"){
+			trial.Patch_present.insertstimulusframe(picture.Patch_locate_1_present,1);
+			trial.Patch_present.insertstimulusframe(text.cross,1);
+			values.x_coordinate = "36.7%";
+			values.y_coordinate = "30%";
+		}else if (item.Object_Patch.item(values.order) == "2"){
+			trial.Patch_present.insertstimulusframe(picture.Patch_locate_2_present,1);
+			trial.Patch_present.insertstimulusframe(text.cross,1);
+			values.x_coordinate = "50%";
+			values.y_coordinate = "30%";
+		}else if (item.Object_Patch.item(values.order) == "3"){
+			trial.Patch_present.insertstimulusframe(picture.Patch_locate_3_present,1);
+			trial.Patch_present.insertstimulusframe(text.cross,1);
+			values.x_coordinate = "63.3%";
+			values.y_coordinate = "30%";
+		}else if (item.Object_Patch.item(values.order) == "4"){
+			trial.Patch_present.insertstimulusframe(picture.Patch_locate_4_present,1);
+			trial.Patch_present.insertstimulusframe(text.cross,1);
+			values.x_coordinate = "36.7%";
+			values.y_coordinate = "50%";
+		}else if (item.Object_Patch.item(values.order) == "5"){
+			trial.Patch_present.insertstimulusframe(picture.Patch_locate_5_present,1);
+			values.x_coordinate = "50%";
+			values.y_coordinate = "50%";
+		}else if (item.Object_Patch.item(values.order) == "6"){
+			trial.Patch_present.insertstimulusframe(picture.Patch_locate_6_present,1);
+			trial.Patch_present.insertstimulusframe(text.cross,1);
+			values.x_coordinate = "63.3%";
+			values.y_coordinate = "50%";
+		}else if (item.Object_Patch.item(values.order) == "7"){
+			trial.Patch_present.insertstimulusframe(picture.Patch_locate_7_present,1);
+			trial.Patch_present.insertstimulusframe(text.cross,1);
+			values.x_coordinate = "36.7%";
+			values.y_coordinate = "70%";
+		}else if (item.Object_Patch.item(values.order) == "8"){
+			trial.Patch_present.insertstimulusframe(picture.Patch_locate_8_present,1);
+			trial.Patch_present.insertstimulusframe(text.cross,1);
+			values.x_coordinate = "50%";
+			values.y_coordinate = "70%";
+		}else{
+			trial.Patch_present.insertstimulusframe(picture.Patch_locate_9_present,1);
+			trial.Patch_present.insertstimulusframe(text.cross,1);
+			values.x_coordinate = "63.3%";
+			values.y_coordinate = "70%";
 		}
 	}else{
 		if(counter.patch_of_random.selectedvalue == 1){
@@ -492,7 +540,7 @@ expressions.validresponse_disks
 <expt Throughout>
 / preinstructions = (intro)
 / postinstructions = (end)
-/ blocks = [1-3 = test]
+/ blocks = [1-3 = test_prac]
 </expt>
 
 
