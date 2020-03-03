@@ -71,6 +71,13 @@ trial.Masking_present;
 ******************************************
 <trial Patch_present_practice>
 	/ ontrialbegin = [
+	if(values.Index_practice == 1){
+		values.time_out_practice = 500;
+	}else if(values.Index_practice == 2){
+		values.time_out_practice = 250;
+	}else{
+		values.time_out_practice = 133;
+	}
 	values.response = 0;
 	values.p_confidence = 0;
 	values.question_choose = counter.question_choose.selectedvalue;
@@ -81,63 +88,63 @@ trial.Masking_present;
 			trial.Patch_present_practice.insertstimulusframe(picture.Present_image_patch_step,1);
 			trial.Patch_present_practice.insertstimulusframe(picture.Patch_locate_1_present,1);
 			trial.Patch_present_practice.insertstimulusframe(text.cross,1);
-			values.x_coordinate = "36.7%";
-			values.y_coordinate = "30%";
+			values.x_coordinate = values.location_horizontal_1;
+			values.y_coordinate = values.location_vertical_1;
 		}else if(counter.patch_of_original.selectedvalue == 2){
 			picture.Present_image_patch_step.insertitem(picture.SquarePresent_practice.item(values.order_practice),1);
 			trial.Patch_present_practice.insertstimulusframe(picture.Present_image_patch_step,1);
 			trial.Patch_present_practice.insertstimulusframe(picture.Patch_locate_2_present,1);
 			trial.Patch_present_practice.insertstimulusframe(text.cross,1);
-			values.x_coordinate = "50%";
-			values.y_coordinate = "30%";			
+			values.x_coordinate = values.location_horizontal_2;
+			values.y_coordinate = values.location_vertical_1;			
 		}else if(counter.patch_of_original.selectedvalue == 3){
 			picture.Present_image_patch_step.insertitem(picture.SquarePresent_practice.item(values.order_practice),1);
 			trial.Patch_present_practice.insertstimulusframe(picture.Present_image_patch_step,1);
 			trial.Patch_present_practice.insertstimulusframe(picture.Patch_locate_3_present,1);
 			trial.Patch_present_practice.insertstimulusframe(text.cross,1);
-			values.x_coordinate = "63.3%";
-			values.y_coordinate = "30%";		
+			values.x_coordinate = values.location_horizontal_3;
+			values.y_coordinate = values.location_vertical_1;	
 		}else if(counter.patch_of_original.selectedvalue == 4){
 			picture.Present_image_patch_step.insertitem(picture.SquarePresent_practice.item(values.order_practice),1);
 			trial.Patch_present_practice.insertstimulusframe(picture.Present_image_patch_step,1);
 			trial.Patch_present_practice.insertstimulusframe(picture.Patch_locate_4_present,1);
 			trial.Patch_present_practice.insertstimulusframe(text.cross,1);
-			values.x_coordinate = "36.7%";
-			values.y_coordinate = "50%";					
+			values.x_coordinate = values.location_horizontal_1;
+			values.y_coordinate = values.location_vertical_2;					
 		}else if(counter.patch_of_original.selectedvalue == 5){
 			picture.Present_image_patch_step.insertitem(picture.SquarePresent_practice.item(values.order_practice),1);
 			trial.Patch_present_practice.insertstimulusframe(picture.Present_image_patch_step,1);
 			trial.Patch_present_practice.insertstimulusframe(picture.Patch_locate_5_present,1);
-			values.x_coordinate = "50%";
-			values.y_coordinate = "50%";			
+			values.x_coordinate = values.location_horizontal_2;
+			values.y_coordinate = values.location_vertical_2;			
 		}else if(counter.patch_of_original.selectedvalue == 6){
 			picture.Present_image_patch_step.insertitem(picture.SquarePresent_practice.item(values.order_practice),1);
 			trial.Patch_present_practice.insertstimulusframe(picture.Present_image_patch_step,1);
 			trial.Patch_present_practice.insertstimulusframe(picture.Patch_locate_6_present,1);
 			trial.Patch_present_practice.insertstimulusframe(text.cross,1);
-			values.x_coordinate = "63.3%";
-			values.y_coordinate = "50%";			
+			values.x_coordinate = values.location_horizontal_3;
+			values.y_coordinate = values.location_vertical_2;			
 		}else if(counter.patch_of_original.selectedvalue == 7){
 			picture.Present_image_patch_step.insertitem(picture.SquarePresent_practice.item(values.order_practice),1);
 			trial.Patch_present_practice.insertstimulusframe(picture.Present_image_patch_step,1);
 			trial.Patch_present_practice.insertstimulusframe(picture.Patch_locate_7_present,1);
 			trial.Patch_present_practice.insertstimulusframe(text.cross,1);
-			values.x_coordinate = "36.7%";
-			values.y_coordinate = "70%";		
+			values.x_coordinate = values.location_horizontal_1;
+			values.y_coordinate = values.location_vertical_3;	
 		}else if(counter.patch_of_original.selectedvalue == 8){
 			picture.Present_image_patch_step.insertitem(picture.SquarePresent_practice.item(values.order_practice),1);
 			trial.Patch_present_practice.insertstimulusframe(picture.Present_image_patch_step,1);
 			trial.Patch_present_practice.insertstimulusframe(picture.Patch_locate_8_present,1);
 			trial.Patch_present_practice.insertstimulusframe(text.cross,1);
-			values.x_coordinate = "50%";
-			values.y_coordinate = "70%";		
+			values.x_coordinate = values.location_horizontal_2;
+			values.y_coordinate = values.location_vertical_3;			
 		}else{
 			picture.Present_image_patch_step.insertitem(picture.SquarePresent_practice.item(values.order_practice),1);
 			trial.Patch_present_practice.insertstimulusframe(picture.Present_image_patch_step,1);
 			trial.Patch_present_practice.insertstimulusframe(picture.Patch_locate_9_present,1);
 			trial.Patch_present_practice.insertstimulusframe(text.cross,1);
-			values.x_coordinate = "63.3%";
-			values.y_coordinate = "70%";			
+			values.x_coordinate = values.location_horizontal_3;
+			values.y_coordinate = values.location_vertical_3;				
 		}	
 	}else if(values.question_choose == 9){
 		values.x_coordinate = item.CP_x_coordinates_practice.item(values.order_practice);
@@ -151,100 +158,100 @@ trial.Masking_present;
 		if(item.Object_Patch_practice.item(values.order_practice) == "1"){
 			trial.Patch_present_practice.insertstimulusframe(picture.Patch_locate_1_present,1);
 			trial.Patch_present_practice.insertstimulusframe(text.cross,1);
-			values.x_coordinate = "36.7%";
-			values.y_coordinate = "30%";
+			values.x_coordinate = values.location_horizontal_1;
+			values.y_coordinate = values.location_vertical_1;	
 		}else if (item.Object_Patch_practice.item(values.order_practice) == "2"){
 			trial.Patch_present_practice.insertstimulusframe(picture.Patch_locate_2_present,1);
 			trial.Patch_present_practice.insertstimulusframe(text.cross,1);
-			values.x_coordinate = "50%";
-			values.y_coordinate = "30%";
+			values.x_coordinate = values.location_horizontal_2;
+			values.y_coordinate = values.location_vertical_1;
 		}else if (item.Object_Patch_practice.item(values.order_practice) == "3"){
 			trial.Patch_present_practice.insertstimulusframe(picture.Patch_locate_3_present,1);
 			trial.Patch_present_practice.insertstimulusframe(text.cross,1);
-			values.x_coordinate = "63.3%";
-			values.y_coordinate = "30%";
+			values.x_coordinate = values.location_horizontal_3;
+			values.y_coordinate = values.location_vertical_1;
 		}else if (item.Object_Patch_practice.item(values.order_practice) == "4"){
 			trial.Patch_present_practice.insertstimulusframe(picture.Patch_locate_4_present,1);
 			trial.Patch_present_practice.insertstimulusframe(text.cross,1);
-			values.x_coordinate = "36.7%";
-			values.y_coordinate = "50%";
+			values.x_coordinate = values.location_horizontal_1;
+			values.y_coordinate = values.location_vertical_2;
 		}else if (item.Object_Patch_practice.item(values.order_practice) == "5"){
 			trial.Patch_present_practice.insertstimulusframe(picture.Patch_locate_5_present,1);
-			values.x_coordinate = "50%";
-			values.y_coordinate = "50%";
+			values.x_coordinate = values.location_horizontal_2;
+			values.y_coordinate = values.location_vertical_2;
 		}else if (item.Object_Patch_practice.item(values.order_practice) == "6"){
 			trial.Patch_present_practice.insertstimulusframe(picture.Patch_locate_6_present,1);
 			trial.Patch_present_practice.insertstimulusframe(text.cross,1);
-			values.x_coordinate = "63.3%";
-			values.y_coordinate = "50%";
+			values.x_coordinate = values.location_horizontal_3;
+			values.y_coordinate = values.location_vertical_2;
 		}else if (item.Object_Patch_practice.item(values.order_practice) == "7"){
 			trial.Patch_present_practice.insertstimulusframe(picture.Patch_locate_7_present,1);
 			trial.Patch_present_practice.insertstimulusframe(text.cross,1);
-			values.x_coordinate = "36.7%";
-			values.y_coordinate = "70%";
+			values.x_coordinate = values.location_horizontal_1;
+			values.y_coordinate = values.location_vertical_3;
 		}else if (item.Object_Patch_practice.item(values.order_practice) == "8"){
 			trial.Patch_present_practice.insertstimulusframe(picture.Patch_locate_8_present,1);
 			trial.Patch_present_practice.insertstimulusframe(text.cross,1);
-			values.x_coordinate = "50%";
-			values.y_coordinate = "70%";	
+			values.x_coordinate = values.location_horizontal_2;
+			values.y_coordinate = values.location_vertical_3;	
 		}else{
 			trial.Patch_present_practice.insertstimulusframe(picture.Patch_locate_9_present,1);
 			trial.Patch_present_practice.insertstimulusframe(text.cross,1);
-			values.x_coordinate = "63.3%";
-			values.y_coordinate = "70%";
+			values.x_coordinate = values.location_horizontal_3;
+			values.y_coordinate = values.location_vertical_3;
 		}
 	}else{
 		if(counter.patch_of_random.selectedvalue == 1){
 			trial.Patch_present_practice.insertstimulusframe(text.cross, 1);
 			trial.Patch_present_practice.insertstimulusframe(picture.nPatch_locate_1_resource, 2);
-			values.x_coordinate = 36.7%;
-			values.y_coordinate = 30%;		
+			values.x_coordinate = values.location_horizontal_1;
+			values.y_coordinate = values.location_vertical_1;	
 		}else if(counter.patch_of_random.selectedvalue == 2){
 			trial.Patch_present_practice.insertstimulusframe(text.cross, 1);
 			trial.Patch_present_practice.insertstimulusframe(picture.nPatch_locate_2_resource, 2);
-			values.x_coordinate = 50%;
-			values.y_coordinate = 30%;			
+			values.x_coordinate = values.location_horizontal_2;
+			values.y_coordinate = values.location_vertical_1;			
 		}else if(counter.patch_of_random.selectedvalue == 3){
 			trial.Patch_present_practice.insertstimulusframe(text.cross, 1);
 			trial.Patch_present_practice.insertstimulusframe(picture.nPatch_locate_3_resource, 2);
-			values.x_coordinate = 63.3%;
-			values.y_coordinate = 30%;			
+			values.x_coordinate = values.location_horizontal_3;
+			values.y_coordinate = values.location_vertical_1;			
 		}else if(counter.patch_of_random.selectedvalue == 4){
 			trial.Patch_present_practice.insertstimulusframe(text.cross, 1);
 			trial.Patch_present_practice.insertstimulusframe(picture.nPatch_locate_4_resource, 2);
-			values.x_coordinate = 36.7%;
-			values.y_coordinate = 50%;			
+			values.x_coordinate = values.location_horizontal_1;
+			values.y_coordinate = values.location_vertical_2;			
 		}else if(counter.patch_of_random.selectedvalue == 5){
 			trial.Patch_present_practice.insertstimulusframe(text.cross, 1);
 			trial.Patch_present_practice.insertstimulusframe(picture.nPatch_locate_5_resource, 2);
-			values.x_coordinate = 50%;
-			values.y_coordinate = 50%;			
+			values.x_coordinate = values.location_horizontal_2;
+			values.y_coordinate = values.location_vertical_2;		
 		}else if(counter.patch_of_random.selectedvalue == 6){
 			trial.Patch_present_practice.insertstimulusframe(text.cross, 1);
 			trial.Patch_present_practice.insertstimulusframe(picture.nPatch_locate_6_resource, 2);
-			values.x_coordinate = 63.3%;
-			values.y_coordinate = 50%;		
+			values.x_coordinate = values.location_horizontal_3;
+			values.y_coordinate = values.location_vertical_2;			
 		}else if(counter.patch_of_random.selectedvalue == 7){
 			trial.Patch_present_practice.insertstimulusframe(text.cross, 1);
 			trial.Patch_present_practice.insertstimulusframe(picture.nPatch_locate_7_resource, 2);
-			values.x_coordinate = 36.7%;
-			values.y_coordinate = 70%;			
+			values.x_coordinate = values.location_horizontal_1;
+			values.y_coordinate = values.location_vertical_3;			
 		}else if(counter.patch_of_random.selectedvalue == 8){
 			trial.Patch_present_practice.insertstimulusframe(text.cross, 1);
 			trial.Patch_present_practice.insertstimulusframe(picture.nPatch_locate_8_resource, 2);
-			values.x_coordinate = 50%;
-			values.y_coordinate = 70%;			
+			values.x_coordinate = values.location_horizontal_2;
+			values.y_coordinate = values.location_vertical_3;			
 		}else{
 			trial.Patch_present_practice.insertstimulusframe(text.cross, 1);
 			trial.Patch_present_practice.insertstimulusframe(picture.nPatch_locate_9_resource, 2);
-			values.x_coordinate = 63.3%;
-			values.y_coordinate = 70%;				
+			values.x_coordinate = values.location_horizontal_3;
+			values.y_coordinate = values.location_vertical_3;				
 		}
 	}	
 ]
 
 	/ stimulusframes = []
-	/ timeout = 500
+	/ timeout = values.time_out_practice
 	/ recorddata = false
 	/ ontrialend = [
 	trial.Patch_present_practice.clearstimulusframes();
@@ -274,9 +281,12 @@ Trial for masking on the patches
 ******************************************************************************************************************************************************************************************************
 
 <trial peripheral_response_practice>
+/ ontrialbegin = [
+	values.order_question += 1;
+]
 / stimulusframes = [
 	1  = response1d, response2d, response3d, response4d, response5d, response6d, response7d, response8d, response_blank,
-lowC_instruction, highC_instruction,part_of_Image,Not_part_of_Image
+lowC_instruction, highC_instruction,part_of_Image,Not_part_of_Image,p_response_instructions,Practice_notice
 ]
 / validresponse = (response_blank, response1d, response2d, response3d, response4d, response5d, response6d, response7d, response8d)
 / inputdevice = mouse
@@ -284,30 +294,10 @@ lowC_instruction, highC_instruction,part_of_Image,Not_part_of_Image
 expressions.validresponse_disks
 ]
 / recorddata = false
-/ ontrialend = [
-	values.order_question += 1;
+/ branch = [
+	trial.centermouse
 ]
 </trial>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 <block test_prac>

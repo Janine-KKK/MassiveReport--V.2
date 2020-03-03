@@ -187,189 +187,189 @@
 </item>
 
 <item CP_x_coordinates>
-/1 = "36.7%"
+/1 = "33.3%"
 /2 = "50%"
-/3 = "36.7%"
+/3 = "33.3%"
 /4 = "50%"
 /5 = "50%"
-/6 = "36.7%"
-/7 = "36.7%"
+/6 = "33.3%"
+/7 = "33.3%"
 /8 = "50%"
 /9 = "50%"
-/10 = "36.7%"
+/10 = "33.3%"
 /11 = "50%"
-/12 = "63.3%"
+/12 = "66.7%"
 /13 = "50%"
 /14 = "50%"
-/15 = "36.7%"
+/15 = "33.3%"
 /16 = "50%"
 /17 = "50%"
 /18 = "50%"
-/19 = "36.7%"
-/20 = "63.3%"
+/19 = "33.3%"
+/20 = "66.7%"
 /21 = "50%"
 /22 = "50%"
-/23 = "63.3%"
-/24 = "36.7%"
+/23 = "66.7%"
+/24 = "33.3%"
 /25 = "50%"
-/26 = "36.7%"
+/26 = "33.3%"
 /27 = "50%"
-/28 = "63.3%"
-/29 = "36.7%"
-/30 = "36.7%"
-/31 = "63.3%"
-/32 = "63.3%"
-/33 = "36.7%"
-/34 = "63.3%"
-/35 = "63.3%"
-/36 = "36.7%"
-/37 = "63.3%"
-/38 = "36.7%"
-/39 = "63.3%"
+/28 = "66.7%"
+/29 = "33.3%"
+/30 = "33.3%"
+/31 = "66.7%"
+/32 = "66.7%"
+/33 = "33.3%"
+/34 = "66.7%"
+/35 = "66.7%"
+/36 = "33.3%"
+/37 = "66.7%"
+/38 = "33.3%"
+/39 = "66.7%"
 /40 = "50%"
-/41 = "63.3%"
+/41 = "66.7%"
 /42 = "50%"
-/43 = "63.3%"
-/44 = "36.7%"
-/45 = "36.7%"
+/43 = "66.7%"
+/44 = "33.3%"
+/45 = "33.3%"
 /46 = "50%"
-/47 = "63.3%"
+/47 = "66.7%"
 /48 = "50%"
 /49 = "50%"
-/50 = "63.3%"
+/50 = "66.7%"
 </item>
 
 <item CP_y_coordinates>
 /1 = "50%"
-/2 = "70%"
-/3 = "70%"
+/2 = "75%"
+/3 = "75%"
 /4 = "50%"
-/5 = "70%"
-/6 = "70%"
+/5 = "75%"
+/6 = "75%"
 /7 = "50%"
 /8 = "50%"
-/9 = "70%"
-/10 = "30%"
+/9 = "75%"
+/10 = "25%"
 /11 = "50%"
 /12 = "50%"
 /13 = "50%"
-/14 = "70%"
-/15 = "30%"
+/14 = "75%"
+/15 = "25%"
 /16 = "50%"
 /17 = "50%"
 /18 = "50%"
 /19 = "50%"
-/20 = "70%"
-/21 = "70%"
-/22 = "30%"
-/23 = "30%"
-/24 = "30%"
-/25 = "30%"
-/26 = "70%"
+/20 = "75%"
+/21 = "75%"
+/22 = "25%"
+/23 = "25%"
+/24 = "25%"
+/25 = "25%"
+/26 = "75%"
 /27 = "50%"
-/28 = "30%"
-/29 = "70%"
+/28 = "25%"
+/29 = "75%"
 /30 = "50%"
-/31 = "70%"
-/32 = "30%"
-/33 = "30%"
-/34 = "70%"
-/35 = "70%"
-/36 = "30%"
-/37 = "70%"
-/38 = "70%"
-/39 = "70%"
+/31 = "75%"
+/32 = "25%"
+/33 = "25%"
+/34 = "75%"
+/35 = "75%"
+/36 = "25%"
+/37 = "75%"
+/38 = "75%"
+/39 = "75%"
 /40 = "50%"
 /41 = "50%"
-/42 = "70%"
-/43 = "70%"
-/44 = "70%"
+/42 = "75%"
+/43 = "75%"
+/44 = "75%"
 /45 = "50%"
-/46 = "70%"
+/46 = "75%"
 /47 = "50%"
-/48 = "70%"
+/48 = "75%"
 /49 = "50%"
 /50 = "50%"
 </item>
 
 <item CP_x_coordinates_practice>
-/1 = "36.7%"
-/2 = "36.7%"
+/1 = "33.3%"
+/2 = "33.3%"
 /3 = "50%"
 </item>
 
 <item CP_y_coordinates_practice>
 /1 = "50%"
 /2 = "50%"
-/3 = "70%"
+/3 = "75%"
 </item>
 
 <picture Patch_locate_1_present>
-  / size = (60%,60%)
+  / size = (values.present_image_size,values.present_image_size)
   / position = (50%,50%)
   /items = ("location1.png")
   /select = sequence
 </picture>
 
 <picture Patch_locate_2_present>
-  / size = (60%,60%)
+  / size = (values.present_image_size,values.present_image_size)
   / position = (50%,50%)
   /items = ("location2.png")
   /select = sequence
 </picture>
 
 <picture Patch_locate_3_present>
-  / size = (60%,60%)
+  / size = (values.present_image_size,values.present_image_size)
   / position = (50%,50%)
   /items = ("location3.png")
   /select = sequence
 </picture>
 
 <picture Patch_locate_4_present>
-  / size = (60%,60%)
+  / size = (values.present_image_size,values.present_image_size)
   / position = (50%,50%)
   /items = ("location4.png")
   /select = sequence
 </picture>
 
 <picture Patch_locate_5_present>
-  / size = (60%,60%)
+  / size = (values.present_image_size,values.present_image_size)
   / position = (50%,50%)
   /items = ("location5.png")
   /select = sequence
 </picture>
 
 <picture Patch_locate_6_present>
-  / size = (60%,60%)
+  / size = (values.present_image_size,values.present_image_size)
   / position = (50%,50%)
   /items = ("location6.png")
   /select = sequence
 </picture>
 
 <picture Patch_locate_7_present>
-  / size = (60%,60%)
+  / size = (values.present_image_size,values.present_image_size)
   / position = (50%,50%)
   /items = ("location7.png")
   /select = sequence
 </picture>
 
 <picture Patch_locate_8_present>
-  / size = (60%,60%)
+  / size = (values.present_image_size,values.present_image_size)
   / position = (50%,50%)
   /items = ("location8.png")
   /select = sequence
 </picture>
 
 <picture Patch_locate_9_present>
-  / size = (60%,60%)
+  / size = (values.present_image_size,values.present_image_size)
   / position = (50%,50%)
   /items = ("location9.png")
   /select = sequence
 </picture>
 
 <picture nPatch_locate_1_resource>
-  / size = (20%,20%)
-  / position = (36.7%,30%)
+  / size = (values.present_image_size/3,values.present_image_size/3)
+  / position = (values.location_horizontal_1,values.location_vertical_1)
   /items = ("patch0000265.jpg",
 "patch0001129.jpg",
 "patch0003769.jpg",
@@ -392,8 +392,8 @@
 </picture>
 
 <picture nPatch_locate_2_resource>
-  / size = (20%,20%)
-  / position = (50%,30%)
+  / size = (values.present_image_size/3,values.present_image_size/3)
+  / position = (values.location_horizontal_2,values.location_vertical_1)
   /items = ("patch0006926.jpg",
 "patch0003794.jpg",
 "patch0001082.jpg",
@@ -413,8 +413,8 @@
 </picture>
 
 <picture nPatch_locate_3_resource>
-  / size = (20%,20%)
-  / position = (63.3%,30%)
+  / size = (values.present_image_size/3,values.present_image_size/3)
+  / position = (values.location_horizontal_3,values.location_vertical_1)
   /items = ("patch0005115.jpg",
 "patch0005679.jpg",
 "patch0001215.jpg",
@@ -443,8 +443,8 @@
 </picture>
 
 <picture nPatch_locate_4_resource>
-  / size = (20%,20%)
-  / position = (36.7%,50%)
+  / size = (values.present_image_size/3,values.present_image_size/3)
+  / position = (values.location_horizontal_1,values.location_vertical_2)
   /items = ("patch0003461.jpg",
 "patch0006161.jpg",
 "patch0001985.jpg",
@@ -469,8 +469,8 @@
 </picture>
 
 <picture nPatch_locate_5_resource>
-  / size = (20%,20%)
-  / position = (50%,50%)
+  / size = (values.present_image_size/3,values.present_image_size/3)
+  / position = (values.location_horizontal_2,values.location_vertical_2)
   /items = ("patch0006510.jpg",
 "patch0002598.jpg",
 "patch0005478.jpg",
@@ -491,8 +491,8 @@
 </picture>
 
 <picture nPatch_locate_6_resource>
-  / size = (20%,20%)
-  / position = (63.3%,50%)
+  / size = (values.present_image_size/3,values.present_image_size/3)
+  / position = (values.location_horizontal_3,values.location_vertical_2)
   /items = ("patch0005131.jpg",
 "patch0001471.jpg",
 "patch0006691.jpg",
@@ -513,8 +513,8 @@
 </picture>
 
 <picture nPatch_locate_7_resource>
-  / size = (20%,20%)
-  / position = (36.7%,70%)
+  / size = (values.present_image_size/3,values.present_image_size/3)
+  / position = (values.location_horizontal_1,values.location_vertical_3)
   /items = ("patch0005373.jpg",
 "patch0006933.jpg",
 "patch0002061.jpg",
@@ -531,8 +531,8 @@
 </picture>
 
 <picture nPatch_locate_8_resource>
-  / size = (20%,20%)
-  / position = (50%,70%)
+  / size = (values.present_image_size/3,values.present_image_size/3)
+  / position = (values.location_horizontal_2,values.location_vertical_3)
   /items = ("patch0005542.jpg",
 "patch0004486.jpg",
 "patch0001462.jpg",
@@ -556,8 +556,8 @@
 </picture>
 
 <picture nPatch_locate_9_resource>
-  / size = (20%,20%)
-  / position = (63.3%,70%)
+  / size = (values.present_image_size/3,values.present_image_size/3)
+  / position = (values.location_horizontal_3,values.location_vertical_3)
   /items = ("patch0000911.jpg",
 "patch0002027.jpg",
 "patch0006947.jpg",
@@ -686,6 +686,12 @@
 /50 = "6"
 </item>
 
+<item Object_Patch_practice>
+/1 = "4"
+/2 = "4"
+/3 = "8"
+</item>
+
 <item Image_ID>
 /1 = "22"
 /2 = "56"
@@ -738,17 +744,4 @@
 /49 = "51"
 /50 = "38"
 </item>
-
-<page intro>
-^^Welcome to our experiment!
-</page>
-<page end>
-^^This is the end of the experiment !
-^^Thank you for your coorperation !
-</page>
-<expt Throughout>
-/ preinstructions = (intro)
-/ postinstructions = (end)
-/ blocks = []
-</expt>
 
