@@ -19,20 +19,20 @@ file_path_patch_mask = 'maskCrop\';
 % file_path_mask = 'mask\';
 % file_path_patch_mask = 'maskCrop\';
 
-Total_Trial_number = 50; %% Define how many congruent images are used to presentation
-Total_Trial_number_practice = 3;
+Total_Trial_number = 30; %% Define how many congruent images are used to presentation
+Total_Trial_number_practice = 3; % was 3
 Number_of_Masking = 20;
 for subject = 1:1
     order_list_group = randperm(140,140); % Shuffle the order of the square image base
-    for group = 1:3
+    for group = 1:5
         DesDir = sprintf('Subject_%d_Group_%d',subject,group);
         mkdir('WebVersion\',DesDir);
         DST_PATH_t = ['WebVersion\',DesDir];
         %%Allocate the square images in each group
-        if group == 1 || group == 2
+        if group == 1 || group == 2 || group == 3 || group == 4
             order_list = order_list_group(1 + Total_Trial_number*(group-1):Total_Trial_number + Total_Trial_number*(group-1));
         else
-            order_list = order_list_group(91:end);
+            order_list = order_list_group(111:end);
         end
         order_list_Masking = randperm(140,Number_of_Masking);
         order_list_practice = randperm(140,Total_Trial_number_practice);

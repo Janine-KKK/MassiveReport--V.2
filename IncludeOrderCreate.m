@@ -1,7 +1,7 @@
 clc
 clear
 for subject = 1:1
-    for group = 1:3
+    for group = 1:5
         filename = sprintf('Script_B%d_G%d.iqx',subject,group);
         fid = fopen(filename,'w');
         fprintf(fid,'<include>\n');
