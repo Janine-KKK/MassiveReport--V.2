@@ -1,0 +1,5 @@
+subject	values.Index	values.patch_ID	values.CongOrIncong	values.Patch_Source	values.Exist_Object	values.Patch_Position	values.response	values.p_confidence	latency	values.Image_ID
+1	0	0	0	0	0	0		0	582	0
+1	0	0	0	0	0	0		0	490	0
+1	0	0	0	0	0	0		0	608	0
+1	0	0	0	0	0	0	1	2	12897	0
