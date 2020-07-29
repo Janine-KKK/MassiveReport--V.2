@@ -221,14 +221,28 @@ You have finished <%values.Index%> of <%values.num_trials%> trials")
 
 <text catch_absent>
 / items = catch_absent_words
-/ select = random
+/ select = values.catch_question
 / vposition = values.textPosition
 / fontstyle = ("Avenir next", values.MYfontsize, true, false, false, false, 5, 0)
 </text>
 
 <text catch_present>
 / items = catch_present_words
-/ select = random
+/ select = values.catch_question
 / vposition = values.textPosition
 / fontstyle = ("Avenir next", values.MYfontsize, true, false, false, false, 5, 0)
+</text>
+
+<text catch_absent_presentation>
+/ items = catch_absent_words
+/ select = values.catch_question
+/ vposition = values.textPosition
+/ fontstyle = ("Avenir next", 15%, true, false, false, false, 5, 0)
+</text>
+
+<text catch_present_presentation>
+/ items = catch_present_words
+/ select = values.catch_question
+/ vposition = values.textPosition
+/ fontstyle = ("Avenir next", 15%, true, false, false, false, 5, 0)
 </text>

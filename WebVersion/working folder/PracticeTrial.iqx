@@ -293,7 +293,6 @@ lowC_instruction, highC_instruction,part_of_Image,Not_part_of_Image,p_response_i
 / isvalidresponse = [if (trial.peripheral_response.response == "response_blank") false; else
 expressions.validresponse_disks
 ]
-/ recorddata = false
 / branch = [
 	trial.centermouse
 ]
@@ -312,7 +311,6 @@ lowC_instruction, highC_instruction,part_of_Image,Not_part_of_Image,catch_respon
 / inputdevice = mouse
 / validresponse = (response_blank, response1d, response2d, response3d, response4d, response5d, response6d, response7d, response8d)
 / correctresponse=(response1d, response2d, response3d, response4d)
-/ recorddata = false
 / branch = [
 	trial.centermouse
 ]
@@ -327,7 +325,6 @@ lowC_instruction, highC_instruction,part_of_Image,Not_part_of_Image,catch_respon
 / inputdevice = mouse
 / validresponse = (response_blank, response1d, response2d, response3d, response4d, response5d, response6d, response7d, response8d)
 / correctresponse=(response5d, response6d, response7d, response8d)
-/ recorddata = false
 / branch = [
 	trial.centermouse
 ]
@@ -335,5 +332,5 @@ lowC_instruction, highC_instruction,part_of_Image,Not_part_of_Image,catch_respon
 
 
 <block test_prac>
-	/ trials = [1 = trial.Fixation_practice; 2-7 = trial.fixiation_2nd_practice; 8 = noreplace(trial.catch_present_trial_practice,trial.catch_absent_trial_practice)]
+	/ trials = [1-3 = trial.Fixation_catch; 4 = trial.Fixation_practice; 5-7 = trial.fixiation_2nd_practice]
 </block>
