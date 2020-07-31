@@ -27,6 +27,8 @@
 	/catch_question = 0
 </values>
 
+
+
 //Put a counter value
 
 *********************************************************************************************************************************
@@ -34,6 +36,7 @@
 													Formal Experiment
 *********************************************************************************************************************************
 *********************************************************************************************************************************
+// Normal fixation cross that branches to normal trials
 <trial Fixation>
 	/ stimulusframes = [1 = cross]
 	/ timeout = 500
@@ -43,6 +46,7 @@
 	]
 </trial>
 
+// fixation cross that branches to catch trials
 <trial Fixation_catch>
 	/ stimulusframes = [1 = cross]
 	/ timeout = 500
@@ -52,18 +56,21 @@
 	]
 </trial>
 
-// catch trial counters
+// catch trial counters for use when determining when to present a catch
+// randomised but distributed evenly throughout the experiment.
 <counter catch_trial_1>
 / select = noreplace(1-6)
+/ selectionrate = experiment
 </counter>
-
 <counter catch_trial_2>
 / select = noreplace(7-12)
+/ selectionrate = experiment
 </counter>
-
 <counter catch_trial_3>
 / select = noreplace(13-20)
+/ selectionrate = experiment
 </counter>
+
 
 <counter image_presentation_order>
 / select = noreplace(1-50)
@@ -550,9 +557,11 @@ expressions.validresponse_disks
 
 
 **************************************************
-				catch trials
+				catch trials (trials)
 **************************************************
 
+// Catch presentation for item.catch_present_words
+// catch question from the list of catch words will be assigned using a random number allocated at ontrialbegin
 <trial catch_presentation_present>
 	/ ontrialbegin = [
 		values.catch_question = round(rand(1, 4))
@@ -561,11 +570,14 @@ expressions.validresponse_disks
 		1 = list.catch_present_presentation_words;
 		]
 	/ timeout = 433
+	/ recorddata = false
 	/ branch = [
 			trial.catch_present_trial
 		]
 </trial>
 
+// Catch presentation for item.catch_absent_words
+// catch question from the list of catch words will be assigned using a random number allocated at ontrialbegin
 <trial catch_presentation_absent>
 	/ ontrialbegin = [
 		values.catch_question = round(rand(1, 4))
@@ -574,11 +586,14 @@ expressions.validresponse_disks
 		1 = list.catch_absent_presentation_words;
 		]
 	/ timeout = 433
+	/ recorddata = false
 	/ branch = [
 			trial.catch_absent_trial
 		]
 </trial>
 
+// Catch Response for item.catch_present_words
+// catch question from the list of catch words will be the same as the one used above in catch presentation
 <trial catch_present_trial>
 / stimulusframes = [
 	1 = response1d, response2d, response3d, response4d, response5d, response6d, response7d, response8d, response_blank,
@@ -588,11 +603,14 @@ lowC_instruction, highC_instruction,part_of_Image,Not_part_of_Image,catch_respon
 / inputdevice = mouse
 / validresponse = (response_blank, response1d, response2d, response3d, response4d, response5d, response6d, response7d, response8d)
 / correctresponse=(response1d, response2d, response3d, response4d)
+/ recorddata = true
 / branch = [
 	trial.centermouse
 ]
 </trial>
 
+// Catch presentation for item.catch_absent_words
+// catch question from the list of catch words will be the same as the one used above in catch presentation
 <trial catch_absent_trial>
 / stimulusframes = [
 	1 = response1d, response2d, response3d, response4d, response5d, response6d, response7d, response8d, response_blank,
@@ -602,6 +620,7 @@ lowC_instruction, highC_instruction,part_of_Image,Not_part_of_Image,catch_respon
 / inputdevice = mouse
 / validresponse = (response_blank, response1d, response2d, response3d, response4d, response5d, response6d, response7d, response8d)
 / correctresponse=(response5d, response6d, response7d, response8d)
+/ recorddata = true
 / branch = [
 	trial.centermouse
 ]
@@ -630,7 +649,7 @@ lowC_instruction, highC_instruction,part_of_Image,Not_part_of_Image,centersquare
 </trial>
 
 **************************************************
-				catch trials
+		catch trials (items and lists)
 **************************************************
 
 <item catch_present_words>
@@ -646,16 +665,7 @@ lowC_instruction, highC_instruction,part_of_Image,Not_part_of_Image,centersquare
 / 4 = "CLICK: No 4"
 </item>
 
-<list catch_present_words>
-/ items = (text.catch_present)
-/ selectionrate = always
-</list>
-
-<list catch_absent_words>
-/ items = (text.catch_absent)
-/ selectionrate = always
-</list>
-
+// Lists used for the catch presentation
 <list catch_present_presentation_words>
 / items = (text.catch_present_presentation)
 / selectionrate = always
@@ -666,11 +676,42 @@ lowC_instruction, highC_instruction,part_of_Image,Not_part_of_Image,centersquare
 / selectionrate = always
 </list>
 
-*****************************************
+// Lists used for the catch response
+<list catch_present_words>
+/ items = (text.catch_present)
+/ selectionrate = always
+</list>
 
+<list catch_absent_words>
+/ items = (text.catch_absent)
+/ selectionrate = always
+</list>
+
+
+
+*****************************************
+// Normal test, 1 image presentation with 6 patch presentations 
 <block test>
 	/ trials = [1 = trial.Fixation; 2-7 = trial.fixiation_2nd;8 = interval_message]
 </block>
+
+// Catch test, 1 image presentation with 6 patch presentations, with a catch trial at the end
+<block test_with_catch>
+	/ trials = [1 = trial.Fixation; 2-7 = trial.fixiation_2nd;8 = trial.Fixation_catch; 9 = interval_message]
+</block>
+
+// Used to determine which type of test block will be shown throughout the experiment, depending on the assigned catch_trial number and current Index.
+<list test_select>
+/ items = (block.test, block.test_with_catch)
+/ selectionrate = always
+/ selectionmode = 	
+	if (values.Index == counter.catch_trial_1.currentitem || values.Index == counter.catch_trial_2.currentitem ||values.Index == counter.catch_trial_3.currentitem){
+		2;
+	}
+	else {
+		1;
+	}
+</list>
 
 <expt Throughout>
 / preinstructions = (start)
@@ -683,7 +724,7 @@ lowC_instruction, highC_instruction,part_of_Image,Not_part_of_Image,centersquare
 6 = attention1;
 7 = test_prac;
 8 = attention2;
-9-58 = test]
+9-58 = list.test_select]
 </expt>
 
 // Include catch data in same format

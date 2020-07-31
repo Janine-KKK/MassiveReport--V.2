@@ -185,9 +185,10 @@ and how confident you are.")
 / position = (50,80)
 </text>
 
+// Catch response instructions for catch trials
 <text catch_response_instructions>
 / items = ("ATTENTION: Please click on the specified response shown.")
-/ fontstyle = ("Arial", 2.8%, true)
+/ fontstyle = ("Arial", 4%, true)
 / txbgcolor = (127,127,127)
 / position = (50,80)
 </text>
@@ -219,13 +220,30 @@ You have finished <%values.Index%> of <%values.num_trials%> trials")
 				catch trials
 **************************************************
 
+// Catch (absent and present) text for use in catch trial presentation
+// Words are selected using a randomly assigned value of 1-4 determined in trial.catch_presentation_present/trial.catch_presentation_absent
+<text catch_absent_presentation>
+/ items = catch_absent_words
+/ select = values.catch_question
+/ vposition = values.textPosition
+/ fontstyle = ("Avenir next", 15%, true, false, false, false, 5, 0)
+</text>
+<text catch_present_presentation>
+/ items = catch_present_words
+/ select = values.catch_question
+/ vposition = values.textPosition
+/ fontstyle = ("Avenir next", 15%, true, false, false, false, 5, 0)
+</text>
+
+
+// Catch (absent and present) text for use in catch trial responses
+// Words are selected using a randomly assigned value of 1-4 determined in trial.catch_presentation_present/trial.catch_presentation_absent
 <text catch_absent>
 / items = catch_absent_words
 / select = values.catch_question
 / vposition = values.textPosition
 / fontstyle = ("Avenir next", values.MYfontsize, true, false, false, false, 5, 0)
 </text>
-
 <text catch_present>
 / items = catch_present_words
 / select = values.catch_question
@@ -233,16 +251,3 @@ You have finished <%values.Index%> of <%values.num_trials%> trials")
 / fontstyle = ("Avenir next", values.MYfontsize, true, false, false, false, 5, 0)
 </text>
 
-<text catch_absent_presentation>
-/ items = catch_absent_words
-/ select = values.catch_question
-/ vposition = values.textPosition
-/ fontstyle = ("Avenir next", 15%, true, false, false, false, 5, 0)
-</text>
-
-<text catch_present_presentation>
-/ items = catch_present_words
-/ select = values.catch_question
-/ vposition = values.textPosition
-/ fontstyle = ("Avenir next", 15%, true, false, false, false, 5, 0)
-</text>
